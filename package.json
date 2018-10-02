@@ -1,0 +1,54 @@
+{
+  "name": "pager-js",
+  "version": "1.0.0",
+  "description": "Utility to back up HTML pages and all its linked resources as a single file",
+  "private": true,
+  "homepage": "https://github.com/msikma/pager",
+  "author": "Michiel Sikma <michiel@sikma.org>",
+  "license": "MIT",
+  "jest": {
+    "testPathIgnorePatterns": [
+      "<rootDir>/scripts/",
+      ".*/lib/"
+    ],
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    },
+    "verbose": true
+  },
+  "files": [
+    "lib"
+  ],
+  "bin": {
+    "pager-cli": "./bin/pager-cli.js"
+  },
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint src",
+    "compile": "babel --config-file ./babel.config.js --verbose --relative ./src -d ../lib",
+    "watch": "babel --watch --config-file ./babel.config.js --verbose --relative ./src -d ../lib"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.0.0-beta.47",
+    "@babel/core": "7.0.0-beta.47",
+    "@babel/node": "7.0.0-beta.47",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/polyfill": "^7.0.0",
+    "@babel/preset-env": "7.0.0-beta.47",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^8.2.6",
+    "babel-jest": "^23.6.0",
+    "eslint": "^4.19.0",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^5.1.0",
+    "eslint-plugin-react": "^7.10.0",
+    "jest": "^23.6.0",
+    "jest-cli": "^23.6.0",
+    "regenerator-runtime": "^0.12.0"
+  },
+  "dependencies": {
+    "argparse": "^1.0.10",
+    "argparse-longhelp": "^1.0.3"
+  }
+}
