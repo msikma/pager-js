@@ -1,6 +1,10 @@
 // pager-js <https://github.com/msikma/pager-js>
 // Copyright © 2018, Michiel Sikma. MIT license.
 
+import fetchPage from './process/fetch'
+import inlineResources from './process/resources'
+import { savePage } from './process/save'
+
 // Runs a single action from the command line, prints the result and then exits.
 export const cli = async args => {
   // Don't run this unless we came from the command line.
@@ -13,5 +17,16 @@ export const cli = async args => {
     process.exit(1)
   }
 
-  console.error('pager-cli: error: not implemented yet')
+  await runTest()
+
+  //console.error('pager-cli: error: not implemented yet')
 }
+
+const runTest = async _ => {
+  // Fixme: temp url
+  const content = await fetchPage('file:///Users/msikma/Projects/pager-js/test/01_red_blue.html')
+  const processedContent = await inlineResources(content)
+  await savePage('./01_red_blue_archive.html', processedContent)
+  console.log('done')
+}
+
