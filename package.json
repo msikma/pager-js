@@ -49,6 +49,8 @@
   },
   "dependencies": {
     "argparse": "^1.0.10",
-    "argparse-longhelp": "^1.0.3"
+    "argparse-longhelp": "^1.0.3",
+    "cheerio": "^1.0.0-rc.2",
+    "request": "^2.88.0"
   }
 }
