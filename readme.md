@@ -6,6 +6,17 @@ When running this script on a file or URL, we will attempt to replace all extern
 
 This library was made for website archiving purposes.
 
+**Note: very early in development. Not ready to use yet.**
+
+### Resource inlining
+
+| Source                    | Type   | Status |
+|:--------------------------|:-------|:-------|
+| `<link rel="stylesheet">` | External CSS link | Inlined as `<style>` tag
+
+Some items might be difficult or impossible to inline—`<object>` or `<embed>` for example.
+
+
 ### Development
 
 The following scripts can be used:
