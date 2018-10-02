@@ -1,5 +1,6 @@
 # Development files.
 _source
+lib
 todo.md
 packages/**/lib
 
