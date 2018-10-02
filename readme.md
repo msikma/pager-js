@@ -1,4 +1,4 @@
-### Pager
+## Pager
 
 A JS library and command line utility designed to make backups of HTML pages, and all its linked resources, into a single file.
 
