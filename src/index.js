@@ -27,6 +27,6 @@ const runTest = async _ => {
   const content = await fetchPage('file:///Users/msikma/Projects/pager-js/test/01_red_blue.html')
   const processedContent = await inlineResources(content)
   await savePage('./01_red_blue_archive.html', processedContent)
-  console.log('done')
+  //console.log('done')
 }
 

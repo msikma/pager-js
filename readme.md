@@ -16,7 +16,6 @@ This library was made for website archiving purposes.
 
 Some items might be difficult or impossible to inline—`<object>` or `<embed>` for example.
 
-
 ### Development
 
 The following scripts can be used:

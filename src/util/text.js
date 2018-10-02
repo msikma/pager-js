@@ -6,3 +6,8 @@ export const ensurePeriod = (str) => {
   if (str.slice(-1) === '.') return str
   return `${str}.`
 }
+
+// Returns only the first line of a multiline string.
+export const getFirstLine = (str) => {
+  return str.split('\n')[0]
+}

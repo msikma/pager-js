@@ -15,6 +15,8 @@ const parser = makeArgParser({
 })
 
 parser.addArgument(['urls'], { help: 'URL(s) or local files to process.', nargs: '+' })
+parser.addArgument(['-V', '--verbose'], { help: 'Prints conversion details to the console.', action: 'storeTrue' })
+parser.addArgument(['-c', '--color'], { help: 'Enables colorized output (only if verbose).', action: 'storeTrue' })
 
 const args = { ...parser.parseArgs() }
 
